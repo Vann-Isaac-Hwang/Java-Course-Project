@@ -1,5 +1,6 @@
 # Java-Course-Project
 A simple frontend and backend separated library management system.
+<img src="https://github.com/Vann-Isaac-Hwang/Java-Course-Project/blob/main/Snapshots/User%20GUI.png?raw=true">
 ## System Design
 The system follows a client - server architecture. The client side is responsible for presenting the graphical user interface (GUI) and interacting with users, while the server side manages the database operations and processes client requests. This separation allows for better scalability and maintainability.
 ### Client - Side Design
