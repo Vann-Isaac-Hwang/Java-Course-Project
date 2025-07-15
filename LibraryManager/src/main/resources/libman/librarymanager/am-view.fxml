@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="libman.librarymanager.AMController"
+            stylesheets="@styles/styles.css"
+            prefHeight="800.0" prefWidth="1200.0">
+
+    <!-- 顶部导航栏 -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #1c1c1e; -fx-padding: 10;">
+<!--            <ImageView fx:id="logo" fitHeight="30" fitWidth="30" style="-fx-padding: 5;">-->
+<!--                <Image url="@libman/librarymanager/images/logo.png" />-->
+<!--            </ImageView>-->
+<!--            <TextField fx:id="searchBar" promptText="Search" style="-fx-pref-width: 190px; -fx-background-radius: 5; -fx-padding: 10; -fx-background-color: #666666;" />-->
+            <Label text="Library Manager" style="-fx-text-fill: linear-gradient(to right, #ffffff, #a0a0a0);; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10 10 10 25" />
+            <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+            <Label fx:id="welcomeLabel" text="Login" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-family: 'Brush Script MT'; -fx-font-size: 28px;" />
+<!--            添加一个20px占位-->
+            <Region style="-fx-pref-width: 15px;" />
+        </HBox>
+    </top>
+
+    <!-- 左侧侧边栏 -->
+    <left>
+        <VBox spacing="3" style="-fx-background-color: #2c2c2e; -fx-padding: 0; -fx-pref-width: 200px;">
+            <Button fx:id="homeButton" onAction="#onHomeButtonClick" text="🏡 Home" stylesheets="@styles/sidestyles.css" />
+            <Button fx:id="mylistButton" onAction="#onMyListButtonClick" text="🌟 Recommend" stylesheets="@styles/sidestyles.css" />
+            <Button fx:id="libraryButton" onAction="#onLibraryButtonClick" text="📖 Library" stylesheets="@styles/sidestyles.css" />
+            <Button fx:id="recordButton" onAction="#onRecordButtonClick" text="📝 Record" stylesheets="@styles/sidestyles.css" />
+        </VBox>
+    </left>
+
+    <!-- 中间内容区域 -->
+    <center>
+        <StackPane fx:id="mainContent" style="-fx-background-color: #121212;">
+            <Label text="Welcome to Library!" style="-fx-font-size: 24px; -fx-text-fill: white;" />
+        </StackPane>
+    </center>
+
+    <!-- 底部播放器栏 -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" style="-fx-background-color: #1c1c1e; -fx-padding: 10;">
+            <Label fx:id="bookTitle" text="Book Title" style="-fx-text-fill: white;" />
+            <Label fx:id="authorName" text="Author Name" style="-fx-text-fill: gray;" />
+            <Label fx:id="bookStatus" text="No status" style="-fx-text-fill: gray;" />
+            <Region fx:id="bottomSpacer" HBox.hgrow="ALWAYS" />
+            <Button fx:id="borrowButton" onAction="#onBorrowButtonClick" text="Borrow" stylesheets="@styles/bottomstyles.css" />
+            <Button fx:id="returnButton" onAction="#onReturnButtonClick" text="Return" stylesheets="@styles/bottomstyles.css" />
+<!--            <ProgressBar fx:id="progressBar" style="-fx-pref-width: 300px;" />-->
+        </HBox>
+    </bottom>
+</BorderPane>

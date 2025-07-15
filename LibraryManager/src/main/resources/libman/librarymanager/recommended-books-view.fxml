@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="libman.librarymanager.RecommendedBooksController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- 推荐书籍表格 -->
+    <TableView fx:id="recommendedBooksTable" onMouseClicked="#handleRowSelection"
+               stylesheets="@styles/dark-theme.css"
+               AnchorPane.topAnchor="50.0"
+               AnchorPane.leftAnchor="20.0"
+               AnchorPane.rightAnchor="20.0"
+               AnchorPane.bottomAnchor="20.0"
+               layoutX="20.0" layoutY="50.0" prefHeight="420.0" prefWidth="560.0">
+        <columns>
+            <TableColumn fx:id="bookNameColumn" text="Book Name" prefWidth="140.0" />
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="140.0" />
+            <TableColumn fx:id="genreColumn" text="Genre" prefWidth="140.0" />
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50.0" />
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="90.0" />
+        </columns>
+    </TableView>
+
+</AnchorPane>

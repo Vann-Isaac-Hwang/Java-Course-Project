@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="libman.librarymanager.RecordViewController"
+            prefHeight="400.0" prefWidth="600.0">
+    <!-- 搜索框 -->
+    <TextField fx:id="searchField" layoutX="20.0" layoutY="10.0"
+               prefWidth="560.0" promptText="Search for records..."
+               style="-fx-background-color: #202020; -fx-text-fill: #f0f0f0" />
+
+    <!-- 图书表格 -->
+    <TableView fx:id="recordTable"
+               stylesheets="@styles/dark-theme.css"
+               AnchorPane.topAnchor="50.0"
+               AnchorPane.leftAnchor="20.0"
+               AnchorPane.rightAnchor="20.0"
+               AnchorPane.bottomAnchor="20.0"
+               layoutX="20.0" layoutY="50.0" prefHeight="420.0" prefWidth="560.0">
+        <columns>
+            <TableColumn fx:id="recordIDColumn" text="Record ID" prefWidth="80.0" />
+            <TableColumn fx:id="actionColumn" text="Action" prefWidth="60.0" />
+            <TableColumn fx:id="bookIDColumn" text="BookID" prefWidth="80.0" />
+            <TableColumn fx:id="bookNameColumn" text="BookName" prefWidth="180.0" />
+            <TableColumn fx:id="timeColumn" text="Time" prefWidth="150.0" />
+        </columns>
+    </TableView>
+
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="libman.librarymanager.LibraryViewController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- 搜索框 -->
+    <TextField fx:id="searchField" layoutX="20.0" layoutY="10.0"
+               prefWidth="420.0" promptText="Search for books..."
+               style="-fx-background-color: #202020; -fx-text-fill: #f0f0f0"/>
+
+    <!-- 搜索类型选择框 -->
+    <ComboBox fx:id="searchTypeComboBox"
+              layoutX="450.0" layoutY="10.0" prefWidth="130.0"
+              stylesheets="@styles/dark-theme.css">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Book Name"/>
+                <String fx:value="Author"/>
+                <String fx:value="Genre"/>
+                <String fx:value="ID"/>
+                <String fx:value="Status"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- 图书表格 -->
+    <TableView fx:id="bookTable" onMouseClicked="#handleRowSelection"
+               stylesheets="@styles/dark-theme.css"
+               AnchorPane.topAnchor="50.0"
+               AnchorPane.leftAnchor="20.0"
+               AnchorPane.rightAnchor="20.0"
+               AnchorPane.bottomAnchor="20.0">
+        <columns>
+            <TableColumn fx:id="bookNameColumn" text="Book Name" prefWidth="140.0" />
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="140.0" />
+            <TableColumn fx:id="genreColumn" text="Genre" prefWidth="140.0" />
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50.0" />
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="90.0" />
+        </columns>
+    </TableView>
+
+</AnchorPane>

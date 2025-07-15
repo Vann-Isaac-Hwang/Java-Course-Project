@@ -1,0 +1,13 @@
+/* Button hover effects */
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 0;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #3498db, #6748e7);
+}

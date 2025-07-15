@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="10" alignment="TOP_CENTER" style="-fx-padding: 20px;">
+    <Label text="Books Management" style="-fx-font-size: 18px;" />
+    <TableView fx:id="booksTable" prefHeight="300.0">
+        <columns>
+            <TableColumn text="Book ID" />
+            <TableColumn text="Book Name" />
+            <TableColumn text="Author" />
+            <TableColumn text="Availability" />
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <Button text="Add Book" fx:id="addBookButton" />
+        <Button text="Delete Book" fx:id="deleteBookButton" />
+    </HBox>
+</VBox>

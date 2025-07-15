@@ -1,0 +1,15 @@
+.scroll-pane {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-background-color: #121212;
+}
+#customHBox1 {
+    -fx-padding: 10;
+    -fx-background-color: #121212;
+}
+
+.scroll-bar {
+    -fx-opacity: 0; /* 隐藏滚动条 */
+    -fx-pref-width: 0; /* 可选：设置宽度为 0 */
+    -fx-pref-height: 0; /* 可选：设置高度为 0 */
+}

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="libman.librarymanager.HomeViewController"
+            prefHeight="400.0" prefWidth="600.0">
+    <!--  A big Title on the left top  -->
+    <Label text="  Home"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;
+               -fx-background-color: linear-gradient(to bottom, #0f0250, #33099d); -fx-fit-to-width: true;
+               -fx-text-fill: linear-gradient(to right, #d3d3d3, #bebebe); -fx-padding: 10 10 0 0"
+           AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+           alignment="TOP_LEFT" maxWidth="Infinity"/>
+
+    <!-- Top Section: Scrollable Book Buttons -->
+    <ScrollPane fx:id="bookScrollPane"
+                hbarPolicy="ALWAYS"
+                vbarPolicy="NEVER"
+                fitToWidth="true"
+                fitToHeight="true"
+                AnchorPane.topAnchor="36.0"
+                AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0"
+                prefHeight="220.0"
+                stylesheets="@styles/scrollpane.css">
+
+        <HBox fx:id="customHBox"
+              spacing="10"
+              alignment="CENTER_LEFT"
+              stylesheets="@styles/scrollpane.css">
+            <!-- Content will be added dynamically -->
+            <!-- Example book buttons -->
+            <Button fx:id="bookButton1" onMouseClicked="#onbookButton1Click" prefWidth="120" minWidth="120" stylesheets="@styles/book-buttons.css">
+                <graphic>
+                    <VBox alignment="CENTER">
+                        <Label fx:id="bookName1" text="Book Name 1"
+                               style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                        <Label text="" style="-fx-font-size: 8px;"/>
+                        <Label fx:id="bookGenre1" text="Genre 1" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                    </VBox>
+                </graphic>
+            </Button>
+            <Button fx:id="bookButton2" onMouseClicked="#onbookButton2Click" prefWidth="120" minWidth="120" stylesheets="@styles/book-buttons.css">
+                <graphic>
+                    <VBox alignment="CENTER">
+                        <Label fx:id="bookName2" text="Book Name 2"
+                               style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                        <Label text="" style="-fx-font-size: 8px;"/>
+                        <Label fx:id="bookGenre2" text="Genre 2" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                    </VBox>
+                </graphic>
+            </Button>
+            <Button fx:id="bookButton3" onMouseClicked="#onbookButton3Click" prefWidth="120" minWidth="120" stylesheets="@styles/book-buttons.css">
+                <graphic>
+                    <VBox alignment="CENTER">
+                        <Label fx:id="bookName3" text="Book Name 3"
+                               style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                        <Label text="" style="-fx-font-size: 8px;"/>
+                        <Label fx:id="bookGenre3" text="Genre 3" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                    </VBox>
+                </graphic>
+            </Button>
+            <Button fx:id="bookButton4" onMouseClicked="#onbookButton4Click" prefWidth="120" minWidth="120" stylesheets="@styles/book-buttons.css">
+                <graphic>
+                    <VBox alignment="CENTER">
+                        <Label fx:id="bookName4" text="Book Name 4"
+                               style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                        <Label text="" style="-fx-font-size: 8px;"/>
+                        <Label fx:id="bookGenre4" text="Genre 4" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                    </VBox>
+                </graphic>
+            </Button>
+            <Button fx:id="bookButton5" onMouseClicked="#onbookButton5Click" prefWidth="120" minWidth="120" stylesheets="@styles/book-buttons.css">
+                <graphic>
+                    <VBox alignment="CENTER">
+                        <Label fx:id="bookName5" text="Book Name 5"
+                               style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                        <Label text="" style="-fx-font-size: 8px;"/>
+                        <Label fx:id="bookGenre5" text="Genre 5" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                    </VBox>
+                </graphic>
+            </Button>
+            <Button fx:id="bookButton6" onMouseClicked="#onbookButton6Click" prefWidth="120" minWidth="120" stylesheets="@styles/book-buttons.css">
+                <graphic>
+                    <VBox alignment="CENTER">
+                        <Label fx:id="bookName6" text="Book Name 6"
+                               style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                        <Label text="" style="-fx-font-size: 8px;"/>
+                        <Label fx:id="bookGenre6" text="Genre 6" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                    </VBox>
+                </graphic>
+            </Button>
+        </HBox>
+    </ScrollPane>
+
+
+<!--    <VBox fx:id="bookContainer"-->
+<!--          spacing="10"-->
+<!--          alignment="CENTER"-->
+<!--          AnchorPane.topAnchor="256.0"-->
+<!--          AnchorPane.leftAnchor="0.0"-->
+<!--          AnchorPane.rightAnchor="0.0"-->
+<!--          prefHeight="220.0"-->
+<!--          stylesheets="@styles/scrollpane1.css">-->
+<!--        <HBox fx:id="buttonPage" spacing="10" alignment="CENTER">-->
+<!--            <Button fx:id="bookButton7" prefWidth="120" minWidth="120" stylesheets="@styles/book-buttons.css">-->
+<!--                <graphic>-->
+<!--                    <VBox alignment="CENTER">-->
+<!--                        <Label fx:id="bookName7" text="Book Name 7"-->
+<!--                               style="-fx-font-size: 14px; -fx-font-weight: bold;"/>-->
+<!--                        <Label text="" style="-fx-font-size: 8px;"/>-->
+<!--                        <Label fx:id="bookGenre7" text="Genre 7" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>-->
+<!--                    </VBox>-->
+<!--                </graphic>-->
+<!--            </Button>-->
+<!--        </HBox>-->
+<!--        <HBox spacing="10" alignment="CENTER">-->
+<!--            <Button fx:id="prevButton" text="Previous" />-->
+<!--            <Button fx:id="nextButton" text="Next" />-->
+<!--        </HBox>-->
+<!--    </VBox>-->
+        <Label text="  Borrowed"
+               style="-fx-font-size: 16px; -fx-font-weight: bold;
+                   -fx-background-color: #121212; -fx-fit-to-width: true;
+                   -fx-text-fill: linear-gradient(to right, #d3d3d3, #bebebe); -fx-padding: 10 10 0 0"
+               AnchorPane.topAnchor="250.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0"
+               alignment="TOP_LEFT" maxWidth="Infinity"/>
+        <ScrollPane fx:id="bookScrollPane1"
+                AnchorPane.topAnchor="280.0"
+                  AnchorPane.leftAnchor="20.0"
+                  AnchorPane.rightAnchor="20.0"
+                  AnchorPane.bottomAnchor="50.0"
+                    fitToWidth="true"
+                    fitToHeight="true"
+                    hbarPolicy="ALWAYS"
+                    vbarPolicy="NEVER"
+                    style="-fx-background-color: #121212;"
+                    stylesheets="@styles/scrollpane1.css">
+
+            <HBox fx:id="customHBox1"
+                  spacing="10"
+                  alignment="CENTER_LEFT"
+                  style="-fx-background-color: #121212"
+                  stylesheets="@styles/scrollpane1.css">
+                <Button fx:id="bookButton7" onMouseClicked="#onbookButton7Click" prefWidth="120" minWidth="120" stylesheets="@styles/borrowed-book-buttons.css">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label fx:id="bookName7" text="Book Name 7"
+                                   style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                            <Label text="" style="-fx-font-size: 8px;"/>
+                            <Label fx:id="bookGenre7" text="Genre 7" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+                <Button fx:id="bookButton8" onMouseClicked="#onbookButton8Click" prefWidth="120" minWidth="120" stylesheets="@styles/borrowed-book-buttons.css">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label fx:id="bookName8" text="Book Name 8"
+                                   style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                            <Label text="" style="-fx-font-size: 8px;"/>
+                            <Label fx:id="bookGenre8" text="Genre 8" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+                <Button fx:id="bookButton9" onMouseClicked="#onbookButton9Click" prefWidth="120" minWidth="120" stylesheets="@styles/borrowed-book-buttons.css">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label fx:id="bookName9" text="Book Name 9"
+                                   style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                            <Label text="" style="-fx-font-size: 8px;"/>
+                            <Label fx:id="bookGenre9" text="Genre 9" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+                <Button fx:id="bookButton10" onMouseClicked="#onbookButton10Click" prefWidth="120" minWidth="120" stylesheets="@styles/borrowed-book-buttons.css">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label fx:id="bookName10" text="Book Name 10"
+                                   style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                            <Label text="" style="-fx-font-size: 8px;"/>
+                            <Label fx:id="bookGenre10" text="Genre 10" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+                <Button fx:id="bookButton11" onMouseClicked="#onbookButton11Click" prefWidth="120" minWidth="120" stylesheets="@styles/borrowed-book-buttons.css">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label fx:id="bookName11" text="Book Name 11"
+                                   style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                            <Label text="" style="-fx-font-size: 8px;"/>
+                            <Label fx:id="bookGenre11" text="Genre 11" style="-fx-font-size: 12px; -fx-text-fill: gray;"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+            </HBox>
+        </ScrollPane>
+
+</AnchorPane>

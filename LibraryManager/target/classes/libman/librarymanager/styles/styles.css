@@ -1,0 +1,21 @@
+
+/* General styles for the application */
+.root {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+    -fx-padding: 0;
+}
+/* Button hover effects */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 35px;
+    -fx-background-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #3498db, #6748e7);
+}

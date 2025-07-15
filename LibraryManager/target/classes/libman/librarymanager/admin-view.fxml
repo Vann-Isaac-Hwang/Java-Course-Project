@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.SplitPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="libman.librarymanager.AdminViewController">
+    <top>
+        <Label text="Admin Dashboard" style="-fx-font-size: 24px; -fx-padding: 10px;" />
+    </top>
+    <center>
+        <TabPane fx:id="tabPane" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Statistics" closable="false">
+                    <SplitPane dividerPositions="0.4" orientation="VERTICAL">
+                        <!-- Top section - Pie Chart -->
+                        <VBox spacing="10" alignment="TOP_CENTER" style="-fx-padding: 10px;" VBox.vgrow="ALWAYS">
+                            <Label text="Statistics" style="-fx-font-size: 18px;" />
+                            <Label text="Genre Borrowing Ratio" style="-fx-font-size: 16px;" />
+                            <PieChart fx:id="genreBorrowingPieChart" VBox.vgrow="ALWAYS" />
+                        </VBox>
+
+                        <!-- Bottom section - Table -->
+                        <VBox spacing="10" alignment="TOP_CENTER" style="-fx-padding: 10px;" VBox.vgrow="ALWAYS">
+                            <Label text="Top 5 Most Borrowed Books" style="-fx-font-size: 16px;" />
+                            <TableView fx:id="popularBooksTable" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="p_bookNameColumn" text="Book Name" />
+                                    <TableColumn fx:id="p_authorColumn" text="Author" />
+                                    <TableColumn fx:id="p_genreColumn" text="Genre" />
+                                    <TableColumn fx:id="p_idColumn" text="ID" />
+                                    <TableColumn fx:id="p_statusColumn" text="Status" />
+                                </columns>
+                                <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                </columnResizePolicy>
+                            </TableView>
+                        </VBox>
+                    </SplitPane>
+                </Tab>
+                <Tab text="Records" closable="false">
+                    <VBox fx:id="recordsPane" spacing="10" alignment="TOP_CENTER" style="-fx-padding: 20px;">
+                        <Label text="Record Management" style="-fx-font-size: 18px;" />
+                        <TableView fx:id="recordTable" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="recordIDColumn" text="Record ID" />
+                                <TableColumn fx:id="userIDColumn" text="User ID" />
+                                <TableColumn fx:id="actionColumn" text="Action" />
+                                <TableColumn fx:id="bookIDColumn" text="Book ID" />
+                                <TableColumn fx:id="bookNameColumn" text="Book Name" />
+                                <TableColumn fx:id="timeColumn" text="Time" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </VBox>
+                </Tab>
+                <Tab text="Books" closable="false">
+                    <VBox fx:id="booksPane" spacing="10" alignment="TOP_CENTER" style="-fx-padding: 20px;">
+                        <Label text="Books Management" style="-fx-font-size: 18px;" />
+                        <TableView fx:id="booksTable" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="Books_bookNameColumn" text="Book Name" />
+                                <TableColumn fx:id="Books_authorColumn" text="Author" />
+                                <TableColumn fx:id="Books_genreColumn" text="Genre" />
+                                <TableColumn fx:id="Books_idColumn" text="Book ID" />
+                                <TableColumn fx:id="Books_statusColumn" text="Availability" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                        <HBox spacing="10">
+                            <TextField fx:id="bookNameField" promptText="Book Name" HBox.hgrow="ALWAYS" />
+                            <TextField fx:id="authorField" promptText="Author" HBox.hgrow="ALWAYS" />
+                            <TextField fx:id="genreField" promptText="Genre" HBox.hgrow="ALWAYS" />
+                        </HBox>
+                        <HBox spacing="10">
+                            <Button text="Add Book" onAction="#onAddBookClicked" fx:id="addBookButton" />
+                            <Button text="Update Book" onAction="#onUpdateBookClicked" fx:id="updateBookButton" />
+                            <Button text="Delete Book" onAction="#onDeleteBookClicked" fx:id="deleteBookButton" />
+                        </HBox>
+                    </VBox>
+                </Tab>
+                <Tab text="Accounts" closable="false">
+                    <VBox fx:id="accountsPane" spacing="10" alignment="TOP_CENTER" style="-fx-padding: 20px;">
+                        <Label text="User Management" style="-fx-font-size: 18px;" />
+                        <TableView fx:id="userTable" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="Users_userIDColumn" text="ID" />
+                                <TableColumn fx:id="Users_usernameColumn" text="Username" />
+                                <TableColumn fx:id="Users_passwordColumn" text="Password" />
+                                <TableColumn fx:id="Users_isBannedColumn" text="Is Banned" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                        <HBox spacing="10" alignment="CENTER">
+                            <Button text="Ban User" onAction="#onBanUserClicked" fx:id="banUserButton" />
+                            <Button text="Unban User" onAction="#onUnbanUserClicked" fx:id="unbanUserButton" />
+                        </HBox>
+                    </VBox>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

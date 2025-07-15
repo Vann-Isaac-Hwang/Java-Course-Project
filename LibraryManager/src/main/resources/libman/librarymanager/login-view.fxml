@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="libman.librarymanager.LoginController"
+      spacing="20" alignment="CENTER"
+      prefHeight="500.0" prefWidth="700.0"
+      stylesheets="@styles/styles.css">
+
+    <!-- 标题部分 -->
+    <VBox alignment="CENTER" spacing="10">
+        <ImageView fitWidth="80" fitHeight="80">
+<!--            <Image url="@/images/library-icon.png" />-->
+        </ImageView>
+        <Label text="Library Manager" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="28" />
+            </font>
+        </Label>
+        <Label text="Please sign in to continue" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" />
+    </VBox>
+
+    <!-- 登录表单 -->
+    <VBox style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);"
+          spacing="20" alignment="CENTER">
+        <!-- 用户名输入 -->
+        <VBox spacing="5">
+            <Label text="Username" style="-fx-font-size: 14px; -fx-text-fill: #34495e;" />
+            <TextField fx:id="usernameField" promptText="Enter your username"
+                       style="-fx-pref-width: 250px; -fx-pref-height: 35px; -fx-font-size: 14px; -fx-background-radius: 5;" />
+        </VBox>
+
+        <!-- 密码输入 -->
+        <VBox spacing="5">
+            <Label text="Password" style="-fx-font-size: 14px; -fx-text-fill: #34495e;" />
+            <PasswordField fx:id="passwordField" promptText="Enter your password"
+                           style="-fx-pref-width: 250px; -fx-pref-height: 35px; -fx-font-size: 14px; -fx-background-radius: 5;" />
+        </VBox>
+
+
+        <HBox alignment="CENTER">
+            <!-- 管理员复选框 -->
+            <CheckBox fx:id="adminCheckBox" text="Login as administrator"
+                      style="-fx-text-fill: #34495e; -fx-font-size: 13px;" />
+        </HBox>
+        <HBox alignment="CENTER_LEFT">
+            <Label fx:id="errorLabel" text="" style="-fx-text-fill: red; -fx-font-size: 12px;" />
+        </HBox>
+
+        <!-- 按钮区域 -->
+        <HBox spacing="15" alignment="CENTER">
+            <Button fx:id="loginButton" onAction="#onLoginButtonClicked" text="Login"
+                    stylesheets="@styles/styles.css" />
+            <Button fx:id="registerButton" onAction="#onRegisterButtonClicked" text="Register"
+                    stylesheets="@styles/styles.css" />
+        </HBox>
+    </VBox>
+
+    <!-- 底部版权信息 -->
+    <Label text="© 2025 Library Management System by Isaac Huang" style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" />
+</VBox>

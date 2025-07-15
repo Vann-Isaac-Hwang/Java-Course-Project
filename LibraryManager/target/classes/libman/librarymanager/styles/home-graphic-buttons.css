@@ -1,0 +1,13 @@
+/* Button hover effects */
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 100px;
+    -fx-background-radius: 0;
+}
+
+.button:hover {
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.5), 20, 0.5, 0, 0), blur(10px);
+}

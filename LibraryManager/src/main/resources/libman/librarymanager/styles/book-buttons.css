@@ -1,0 +1,55 @@
+/* Button hover effects */
+.button {
+    -fx-background-color: #f4f4f4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-pref-width: 150;
+    -fx-pref-height: 200;
+}
+
+/* Individual button colors using fx:ids */
+#bookButton1 {
+    -fx-background-color: linear-gradient(to bottom right, #FF9A8B, #FF6B95);
+}
+#bookButton1:hover {
+    -fx-background-color: linear-gradient(to bottom right, #FF6B95, #FF9A8B);
+}
+
+#bookButton2 {
+    -fx-background-color: linear-gradient(to bottom right, #8EC5FC, #E0C3FC);
+}
+#bookButton2:hover {
+    -fx-background-color: linear-gradient(to bottom right, #E0C3FC, #8EC5FC);
+}
+
+#bookButton3 {
+    -fx-background-color: linear-gradient(to bottom right, #57C6E1, #B5F7FF);
+}
+#bookButton3:hover {
+    -fx-background-color: linear-gradient(to bottom right, #B5F7FF, #57C6E1);
+}
+
+#bookButton4 {
+    -fx-background-color: linear-gradient(to bottom right, #A1C4FD, #C2E9FB);
+}
+#bookButton4:hover {
+    -fx-background-color: linear-gradient(to bottom right, #C2E9FB, #A1C4FD);
+}
+
+#bookButton5 {
+    -fx-background-color: linear-gradient(to bottom right, #FFECD2, #FCB69F);
+}
+#bookButton5:hover {
+    -fx-background-color: linear-gradient(to bottom right, #FCB69F, #FFECD2);
+}
+
+#bookButton6 {
+    -fx-background-color: linear-gradient(to bottom right, #84FAB0, #8FD3F4);
+}
+#bookButton6:hover {
+    -fx-background-color: linear-gradient(to bottom right, #8FD3F4, #84FAB0);
+}
