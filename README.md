@@ -59,3 +59,12 @@ SQLite is chosen as the database for this system because it is lightweight, easy
 * Action: A text field indicating the action (either "Borrow" or "Return").
 * BookID: A text field representing the ID of the book involved in the action.
 * Timestamp: A datetime field recording the time of the action.
+## Snapshots
+### Login Window
+<img src="https://github.com/Vann-Isaac-Hwang/Java-Course-Project/blob/main/Snapshots/Login%20Window.png?raw=true">
+### User Interface
+<img src="https://github.com/Vann-Isaac-Hwang/Java-Course-Project/blob/main/Snapshots/User%20GUI.png?raw=true">
+### Admin Interface
+<img src="https://github.com/Vann-Isaac-Hwang/Java-Course-Project/blob/main/Snapshots/Admin%20GUI.png?raw=true">
+### Server End
+<img src="https://github.com/Vann-Isaac-Hwang/Java-Course-Project/blob/main/Snapshots/Server%20End.png?raw=true">
